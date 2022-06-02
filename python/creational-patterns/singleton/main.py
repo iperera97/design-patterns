@@ -36,13 +36,14 @@ class SingletonV2:
         return cls.__instance
 
 
-single_v1_instances = [SingletonV1(), SingletonV1(), SingletonV1(), SingletonV1()]
-print('is_same_instance on v1 ?', is_all_are_same_instance(single_v1_instances))
+if __name__ == "__main__":
+    single_v1_instances = [SingletonV1(), SingletonV1(), SingletonV1(), SingletonV1()]
+    print('is_same_instance on v1 ?', is_all_are_same_instance(single_v1_instances))
 
-single_v2_instances = [
-    SingletonV2.init_singleton(),
-    SingletonV2.init_singleton(),
-    SingletonV2.init_singleton(),
-    SingletonV2.init_singleton()
-]
-print('is_same_instance on v2 ?', is_all_are_same_instance(single_v2_instances))
+    single_v2_instances = [
+        SingletonV2.init_singleton(),
+        SingletonV2.init_singleton(),
+        SingletonV2.init_singleton(),
+        SingletonV2.init_singleton()
+    ]
+    print('is_same_instance on v2 ?', is_all_are_same_instance(single_v2_instances))
